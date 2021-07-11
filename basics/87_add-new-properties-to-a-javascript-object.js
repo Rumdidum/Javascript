@@ -9,4 +9,7 @@ myDog["bark"] = "woof";
 
 console.log(myDog.bark)
 // or 
-console.log(myDog.["bark"])
+// console.log(myDog.["bark"])
+
+console.log("test")
+
