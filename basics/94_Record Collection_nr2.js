@@ -19,6 +19,7 @@ var recordCollection = {
   }
 };
 
+
 console.log("fuuuk", recordCollection[2548].hasOwnProperty("tracks"));
 
 // Only change code below this line
