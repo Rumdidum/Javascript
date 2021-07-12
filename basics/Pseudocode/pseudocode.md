@@ -37,7 +37,7 @@ return records;
 // if prop isnt 'tracks' and 'value' isnt empty string, 
 if ("tracks" != prop && value != "")
     // update or set that albums 'prop' to 'value.
-    albumID = recordCollection.id.prop[value];
+    id = recordCollection.id.prop[value];
 
 // if "prop" is "tracks" but the album doesn't have a "tracks" property, 
 else if (prop == "tracks" && id != "tracks")
@@ -57,6 +57,16 @@ return records;
 else if (value == "")
     // delete the given "prop" property from the album.
     delete recordCollection.id.prop
+
+function updateRecords(records, id, prop="test1", value="test2") {
+
+  id      = recordCollection[id]
+  prop    = recordCollection.id[prop]
+  value   = recordCollection.prop[value]
+
+  records = recordCollection;
+  return records;
+}
 
 updateRecords(recordCollection, 5439, 'artist', 'ABBA');
 
