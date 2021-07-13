@@ -47,7 +47,36 @@ https://www.javascripttutorial.net/javascript-callback/
 let numbers = [1, 2, 4, 7, 3, 5, 6];
 
 function isOddNumber(number) {
-    return number % 2;
+    return number % 2;  
 }
-const oddNumbers = numbers.filter(isOddNumber);
-console.log(oddNumbers); // [ 1, 7, 3, 5 ]
+// "numbers" übergibt das Array an "filter" das wiederrum übergibt an isOddnumber
+// filter creates a new array with the numbers that pass "isOddNumber".
+const oddNumbers = numbers.filter(isOddNumber);     
+console.log(oddNumbers); // [ 1, 7, 3, 5 ]          
+
+
+// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_filter2
+let ages = [23, 43, 12, 88];
+
+function checkAges(age) {
+    return age > 18;
+}
+
+function myDisco(x) {
+    x = ages.filter(checkAges);
+    return x;
+}
+console.log(myDisco());
+
+//https://www.w3schools.com/js/js_callback.asp
+function myDisplayer(some) {
+  console.log(some);
+}
+
+function myCalculator(num1, num2) {
+  let sum = num1 + num2;
+  return sum;
+}
+
+let result = myCalculator(5, 5);
+myDisplayer(result); 
