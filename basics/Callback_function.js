@@ -69,14 +69,26 @@ function myDisco(x) {
 console.log(myDisco());
 
 //https://www.w3schools.com/js/js_callback.asp
-function myDisplayer(some) {
-  console.log(some);
+// https://www.w3schools.com/js/js_asynchronous.asp
+
+// Asynchronous Js
+
+function myDisplayer(someFunc) {
+    console.log(someFunc);
 }
 
-function myCalculator(num1, num2) {
-  let sum = num1 + num2;
-  return sum;
+function multiply(num1, num2, myCallback) {
+    let sum = num1 * num2;
+    myCallback(sum);
 }
 
-let result = myCalculator(5, 5);
-myDisplayer(result); 
+multiply(20, 5, myDisplayer);
+
+
+// Wating for Timeout
+
+setTimeout(myFunction, 3000);
+
+function myFunction() {
+  console.log("I love You !!");
+}
