@@ -18,14 +18,10 @@ var recordCollection = {
     albumTitle: 'ABBA Gold'
   }
 };
-
-
 console.log("fuuuk", recordCollection[2548].hasOwnProperty("tracks"));
 
 // Only change code below this line
 function updateRecords(records, id, prop, value) {
-
-
   if (prop !== "tracks" && value !== "") {
     records[id][prop] = value
     console.log("first")

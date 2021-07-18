@@ -1,0 +1,35 @@
+
+
+<!-- We have an array of objects representing different people in our contacts lists.
+
+A lookUpProfile function that takes name and a property (prop) as arguments has been pre-written for you.
+
+The function should check if name is an actual contact's firstName and the given property (prop) is a property of that contact.
+
+If both are true, then return the "value" of that property.
+
+If name does not correspond to any contacts then return the string No such contact.
+
+If prop does not correspond to any valid properties of a contact found to match name then return the string No such property.
+ -->
+
+
+<!-- create a variable to return an array if needed -->
+var result = [];
+<!-- create a loopig to iterate throught an array -->
+for (var i = 0; i < contacts.length; i++)
+
+<!-- check if "name" is an actual "contacts" "firstName" -->
+if (contacts[i]["firstName"] == name)
+    result = contacts[i][prop];
+<!-- and the given property (prop) is a property of that contact. -->
+if (contacts[i]["firstName"] == name && contacts[i][prop])
+
+        <!-- das wird wohl das richtige sein -->
+if (contacts[i]["firstName"] == name && contacts[i].hasOwnProperty(prop))
+
+<!-- If both are true, then return the "value" of that property. -->
+    result = contacts[i][prop];
+return result
+
+<!-- If name does not correspond to any contacts then return the string No such contact. -->
