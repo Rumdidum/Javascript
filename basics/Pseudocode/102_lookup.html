@@ -14,8 +14,6 @@ If prop does not correspond to any valid properties of a contact found to match 
  -->
 
 
-<!-- create a variable to return an array if needed -->
-var result = [];
 <!-- create a loopig to iterate throught an array -->
 for (var i = 0; i < contacts.length; i++)
 
@@ -33,3 +31,8 @@ if (contacts[i]["firstName"] == name && contacts[i].hasOwnProperty(prop))
 return result
 
 <!-- If name does not correspond to any contacts then return the string No such contact. -->
+else if (contacts[i]["firstName"] != name) {
+          result = "No such contact";
+
+<!-- If prop does not correspond to any valid properties of a contact found to match name then return the string No such property. -->
+else if (contacts[i]["firstName"] == name && !(contacts[i].hasOwnProperty(prop)))
