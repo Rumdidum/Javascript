@@ -12,7 +12,7 @@
 multiply([5, 6, 10], 3)
 */
 
-function multiply(arr, n) {
+/*function multiply(arr, n) {
   if (n <= 0) {
     console.log("if: ", n)
     return 1;
@@ -21,4 +21,7 @@ function multiply(arr, n) {
     return multiply(arr, n - 1) * arr[n - 1];
   }
 }
-console.log(multiply([5, 6, 10], 3));
+console.log(multiply([5, 6, 10], 3));*/
+
+"use strict";
+x = 3.14;
