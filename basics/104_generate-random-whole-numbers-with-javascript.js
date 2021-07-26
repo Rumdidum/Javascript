@@ -11,15 +11,16 @@ function randomWholeNum(myMin, myMax) {
     }
   }
 }
-randomWholeNum(0, 6);
-/*
+// randomWholeNum(0, 6);
+
 function randomRange(myMin, myMax) {
   // Only change code below this line
   return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
   // Only change code above this line
 }
-console.log(randomRange(20, 100))
-*/
+console.log(randomRange(0, 2))
+console.log(Math.floor(6.99999 * (6 + 1)) + 2)
+
 
 // Explanation Hint section:
 //https://forum.freecodecamp.org/t/freecodecamp-challenge-guide-generate-random-whole-numbers-within-a-range/18187/9
